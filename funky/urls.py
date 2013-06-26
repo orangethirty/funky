@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from chuli.views import Puli
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -14,4 +15,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    
+    url(r'^$', 'chuli.views.index'),
+    url(r'^search/$', 'chuli.views.search')
+    #url(r'^search/(?P<q>[.*])/', 'chuli.views.search'),
 )
